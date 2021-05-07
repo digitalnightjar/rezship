@@ -30,9 +30,8 @@ include_directories(${SDL2_IMAGE_DIRS})
 add_executable(rezship_game main.cpp)
 
 # Link SDL2::Main, SDL2::Image and SDL2::GFX to our project
-#target_link_libraries(${PROJECT_NAME} SDL2::Main SDL2::Image)
-target_link_libraries(rezship_game ${SDL2_LIBRARIES} SDL2::Main ${SDL2_IMAGE_LIBRARIES} SDL2::Image) 
-#target_link_libraries(rezship_game "-framework Cocoa -framework OpenGL"${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} SDL2::Main SDL2::Image)
+#target_link_libraries(rezship_game ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES}) 
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
